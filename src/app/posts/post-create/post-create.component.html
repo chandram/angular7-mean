@@ -1,0 +1,49 @@
+<!-- <h2>Post create</h2> -->
+
+<!-- one way bidning -->
+<!-- <textarea rows="6" [value]="newPost" #postInput></textarea>
+<button (click)="onAddPost(postInput)">Save post</button>
+
+
+<p>{{newPost}}</p>
+-->
+
+<!-- two way bidning -->
+<!-- <mat-card>
+  <form>
+      <mat-form-field>
+          <input matInput type="text" [(ngModel)]="enteredTitle" />
+        </mat-form-field>
+        <mat-form-field>
+          <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="onAddPost()">Save post</button>
+  </form>
+</mat-card> -->
+
+<!-- angular provides -->
+<mat-card>
+    <form (submit)="createPost(postForm)" #postForm="ngForm">
+        <mat-form-field>
+            <input matInput type="text"
+            name="title"
+            ngModel
+            #title="ngModel"
+            placeholder="Post Title"
+            required minlength="3" />
+            <!-- <mat-error *ngIf="postForm.getControle('title').invalid"></mat-error> -->
+            <mat-error *ngIf="title.invalid">Invalid error</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput rows="6"
+            name="content"
+            ngModel
+            placeholder="Post Content"
+            required></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary"
+          type="submit">Save post</button>
+    </form>
+  </mat-card>
+
+

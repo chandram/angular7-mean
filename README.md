@@ -1,4 +1,4 @@
-# AngularMean
+# MEAN (Mongo, Express, Angular 7.3.1 & obviously Node)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
@@ -14,14 +14,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Running backend API server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Go to server directory and run `npm run dev` to start the api server running in port 4000, Navigate to `http://localhost:4000/`
 
-## Running end-to-end tests
+BE server uses Express & MongoDB. Inorder to run MondoDB, download community version from `https://www.mongodb.com/download-center/community` or use `brew install mongodb`. Follow the general creation of data store `/data/db`. Run 
+ `sudo mkdir -p /data/db` & start the server using `sudo ./mongod` (add sudo if needed)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
