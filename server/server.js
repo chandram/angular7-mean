@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 
 // run sudo mkdir -p /data/db &
 // run mondo db with sudo ./mongod
-// https://michelebusta.com/the-little-things-5-initialize-a-local-mongo-db-8972d71b7715
 const url = 'mongodb://localhost:27017/AngularMean';
 mongoose.connect(url, (err, db) => {
   if (err) throw err;
